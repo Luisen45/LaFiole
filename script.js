@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const correo = document.getElementById("correo").value.trim();
       const mensaje = document.getElementById("mensaje").value.trim();
 
+      // Validaciones simples
       if (!nombre || !correo || !mensaje) {
         alert("Por favor, completa todos los campos.");
         return;
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Aquí podrías enviar el formulario por AJAX o simplemente:
+      // Ejemplo de acción final (enviar)
       alert("¡Formulario enviado correctamente! Gracias por contactarnos.");
       form.reset();
     });
