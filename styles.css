@@ -46,16 +46,12 @@ body {
   color: #c2a68a;
 }
 
-/* Sección "hero" (la sección principal en index.html) */
+/* Sección "hero" (página principal) */
 .hero {
-  /* quitamos el height: 80vh; */
-  min-height: 100vh; /* para que se expanda a todo el alto de la pantalla */
+  min-height: 100vh;
   width: 100%;
   background: url("https://i.imgur.com/02omTrH.jpg") center center no-repeat;
-  /* Con 'contain' mostramos la imagen completa (sin recortar) */
-  background-size: contain;
-  background-color: #fff; /* color de fondo debajo de la imagen */
-  /* Mantengo el display flex para centrar el contenido */
+  background-size: cover; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +60,6 @@ body {
 }
 
 .hero-content {
-  /* Fondo semitransparente para resaltar el texto */
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: 8px;
