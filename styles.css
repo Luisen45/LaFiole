@@ -51,11 +51,8 @@ body {
   min-height: 100vh; /* Ocupar toda la ventana */
   width: 100%;
   background: url("https://i.imgur.com/02omTrH.jpg") no-repeat center center;
-  /* Estas tres líneas son clave para el parallax */
-  background-size: cover;
-  background-attachment: fixed; /* efecto parallax */
-  background-position: center;
-
+  background-size: cover; 
+  background-attachment: fixed; /* Para el efecto parallax */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,4 +141,62 @@ body {
 
 .contact-form button:hover {
   background-color: #c2a68a;
+}
+
+/* Secciones adicionales en la página de inicio */
+
+/* Sección introductoria */
+.intro-section {
+  background-color: #fff;       /* Fondo blanco */
+  padding: 2rem 1rem;          /* Espacio interno */
+  margin-top: 2rem;            /* Separación de la sección hero */
+}
+
+.intro-content {
+  max-width: 800px;            /* Ancho máximo para mejorar lectura */
+  margin: 0 auto;              /* Centrar horizontalmente */
+  text-align: left;            /* Ajusta a 'center' si lo prefieres */
+}
+
+.intro-content h2 {
+  font-size: 2rem;
+  color: #5b4a3c;              /* Mantener paleta de colores */
+  margin-bottom: 1rem;
+}
+
+.intro-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Sección de detalles */
+.info-section {
+  background-color: #f9f9f9;   /* Gris claro para diferenciar */
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.info-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.info-content h2 {
+  font-size: 1.8rem;
+  color: #5b4a3c;
+  margin-bottom: 1rem;
+}
+
+.info-content p,
+.info-content li {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.info-content ul {
+  list-style: disc inside;     /* Balas dentro del texto */
+  margin-left: 1rem;
 }
