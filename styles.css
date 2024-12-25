@@ -46,12 +46,16 @@ body {
   color: #c2a68a;
 }
 
-/* Sección "hero" (página principal: index.html) */
+/* Sección "hero" con efecto parallax */
 .hero {
-  min-height: 100vh; /* Ocupar toda la altura de la ventana */
+  min-height: 100vh; /* Ocupar toda la ventana */
   width: 100%;
-  background: url("https://i.imgur.com/02omTrH.jpg") center center no-repeat;
-  background-size: cover; 
+  background: url("https://i.imgur.com/02omTrH.jpg") no-repeat center center;
+  /* Estas tres líneas son clave para el parallax */
+  background-size: cover;
+  background-attachment: fixed; /* efecto parallax */
+  background-position: center;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,4 +145,3 @@ body {
 .contact-form button:hover {
   background-color: #c2a68a;
 }
-
