@@ -111,6 +111,12 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
+.hero-serum {
+  background: url("img/hero-serum.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .hero::before {
   content: '';
   position: absolute;
