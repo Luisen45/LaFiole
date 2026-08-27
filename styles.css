@@ -515,7 +515,7 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
-/* Tarjeta Pro Tip */
+/* Tarjeta Pro Tip / Recomendaciones de Uso */
 .pro-tip-card {
   background: #fffdfa;
   border: 2px solid var(--accent-gold);
@@ -528,7 +528,7 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
 }
 
 .tip-icon {
@@ -536,23 +536,88 @@ h1, h2, h3, h4 {
 }
 
 .tip-header h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
-.pro-tip-card p {
+.tip-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-bottom: 2.2rem;
+}
+
+.tip-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.tip-bullet {
+  color: var(--accent-gold);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+
+.tip-list p {
   color: var(--text-main);
   font-size: 1.05rem;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  margin: 0;
 }
 
-.tip-summary {
+.tip-footer-cta {
   background: var(--accent-light);
-  padding: 1.2rem 1.8rem;
-  border-radius: var(--radius-sm);
-  color: var(--primary-color);
-  font-size: 1rem;
-  font-weight: 500;
+  padding: 1.8rem 2rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.8rem;
+  border: 1px solid rgba(194, 166, 138, 0.3);
+  margin-top: 1.5rem;
+}
+
+.tip-cta-text {
+  color: var(--primary-dark);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0 !important;
+}
+
+.btn-tip-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.85rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-tip-action:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: var(--white);
+}
+
+.btn-tip-action .btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-tip-action:hover .btn-arrow {
+  transform: translateX(4px);
 }
 
 /* ==========================================================================
