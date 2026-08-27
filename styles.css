@@ -169,22 +169,57 @@ h1, h2, h3, h4 {
 }
 
 .btn-comenzar {
-  display: inline-block;
-  background-color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #5b4a3c 0%, #3e3025 100%);
   color: var(--white);
-  padding: 0.9rem 2.2rem;
+  padding: 1.1rem 2.8rem;
   text-decoration: none;
-  border-radius: var(--radius-sm);
-  transition: all 0.3s ease;
+  border-radius: 50px;
   font-weight: 600;
-  letter-spacing: 1px;
-  box-shadow: var(--shadow-sm);
+  font-size: 0.92rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid rgba(194, 166, 138, 0.4);
+  box-shadow: 0 10px 25px rgba(91, 74, 60, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-comenzar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-comenzar:hover::before {
+  left: 100%;
 }
 
 .btn-comenzar:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, #6c5847 0%, #4a3a2d 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 35px rgba(91, 74, 60, 0.35), 0 0 15px rgba(194, 166, 138, 0.3);
+  border-color: var(--accent-gold);
+  color: var(--white);
+}
+
+.btn-comenzar .btn-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.btn-comenzar:hover .btn-arrow {
+  transform: translateX(5px);
 }
 
 /* ==========================================================================
