@@ -621,6 +621,154 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
+   Sección de Anuncio / Spotlight Sérum en Inicio
+   ========================================================================== */
+.serum-spotlight-section {
+  max-width: 1150px;
+  margin: 5rem auto 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.spotlight-card {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  background: var(--white);
+  padding: 3.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(194, 166, 138, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(194, 166, 138, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.spotlight-image-wrap {
+  flex: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: #f7f5f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(194, 166, 138, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.spotlight-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.spotlight-card:hover .spotlight-img {
+  transform: scale(1.03);
+}
+
+.spotlight-content {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.spotlight-content h2 {
+  font-size: 2.3rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.25;
+}
+
+.spotlight-tagline {
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
+}
+
+.spotlight-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+}
+
+.spotlight-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.feature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-light);
+  color: var(--primary-dark);
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(194, 166, 138, 0.25);
+}
+
+.btn-spotlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #5b4a3c 0%, #3e3025 100%);
+  color: var(--white);
+  padding: 1rem 2.2rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(194, 166, 138, 0.4);
+  box-shadow: 0 8px 20px rgba(91, 74, 60, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-spotlight:hover {
+  background: linear-gradient(135deg, #6c5847 0%, #4a3a2d 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(91, 74, 60, 0.3);
+  color: var(--white);
+}
+
+.btn-spotlight .btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-spotlight:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .spotlight-card {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+/* ==========================================================================
    Secciones de Inicio (Intro & Info)
    ========================================================================== */
 .intro-section, .info-section {
